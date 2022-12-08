@@ -31,7 +31,8 @@
 		<module>sm-core</module>
 		<module>sm-shop-model</module>
 		<module>sm-shop</module>
-	</modules>
+
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -123,7 +124,11 @@
 				<artifactId>sm-shop-model</artifactId>
 				<version>${shopizer.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>4.2.2</version>
+			</dependency>
 
 
 			<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
@@ -516,7 +521,21 @@
 		<!-- postgres <dependency> <groupId>org.postgresql</groupId> <artifactId>postgresql</artifactId> 
 			</dependency> -->
 
-
+		<dependency>
+			<groupId>com.mashape.unirest</groupId>
+			<artifactId>unirest-java</artifactId>
+			<version>1.4.9</version>
+		</dependency>
+		<dependency>
+			<groupId>io.joshworks.unirest</groupId>
+			<artifactId>unirest-java</artifactId>
+			<version>1.8.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.7.1</version>
+		</dependency>
 	</dependencies>
 
 	<repositories>

@@ -37,6 +37,7 @@
 											<form:radiobutton id="taxBasisCalculation" path="taxBasisCalculation" value="STOREADDRESS"/>&nbsp;<s:message code="label.tax.storeaddress" text="Store address" /><br/>			
 											<form:radiobutton id="taxBasisCalculation" path="taxBasisCalculation" value="SHIPPINGADDRESS"/>&nbsp;<s:message code="label.shipping.shippingaddress" text="Shipping address" /><br/>
 											<form:radiobutton id="taxBasisCalculation" path="taxBasisCalculation" value="BILLINGADDRESS"/>&nbsp;<s:message code="label.shipping.billingaddress" text="Billing address" />
+
                         				</div>
 	                                	<span class="help-inline"><form:errors path="taxBasisCalculation" cssClass="error" /></span>
 	                        		</div>
