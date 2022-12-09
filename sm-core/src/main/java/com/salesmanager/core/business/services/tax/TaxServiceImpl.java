@@ -398,7 +398,7 @@ public class TaxServiceImpl
 		VtxTaxService vtxTaxService = new VtxTaxService();
 		VtxTaxCalc vtxCalcResp = new VtxTaxCalc();
 		try {
-			String accessToken = vtxTaxService.getAuthenticate();
+			String accessToken ="";// vtxTaxService.getAuthenticate();
 			vtxCalcResp = vtxTaxService.doCalculation(vtxCalcReq, accessToken);
 		} catch (IOException e) {
 			throw new RuntimeException(e);

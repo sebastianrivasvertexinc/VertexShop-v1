@@ -38,10 +38,10 @@ private String clientSecret;
         RequestBody body = RequestBody.create(mediaType, gson.toJson(calcRequest,VtxTaxCalcReq.class));
 
         Request request = new Request.Builder()
-                .url("https://sales-oseries9.ondemand.vertexinc.com/vertex-ws/v2/supplies")
+                .url("http://kopas0007:8995/vertex-ws/v2/supplies")
                 .method("POST", body)
                 .addHeader("Content-Type", "application/json")
-                .addHeader("Authorization", "Bearer "+accessToken.toString())
+                .addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2VJZCI6MzAsImF1ZCI6WyJvYXV0aDItcmVzb3VyY2UiXSwic2NvcGUiOlsicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL29zZXJpZXNhdXRoLnZlcnRleGluYy5jb20vIiwic3ZjQWNjdCI6ZmFsc2UsImV4cCI6MTY3MDYwOTg1MSwidXNlcklkIjo0MCwianRpIjoiMzEyNGVmZDItNGI3NC00ZjcyLWE2ZmUtNzliNjkwMzI1ZjgxIiwiY2xpZW50X2lkIjoiZjQ5ZDRkYTk2YTFiLnZlcnRleGluYy5jb20ifQ.1WiyFwVizDcTP64YG469uopN7yLD5NtCAx-Gmg0fpU8")
                 //  .addHeader("Cookie", "JSESSIONID=29CB597EED78A1E472F700751BD4E3EE; BIGipServerpool_sales09_OnDemand=543038986.20480.0000")
                 .build();
         Response response = client.newCall(request).execute();
@@ -56,9 +56,9 @@ private String clientSecret;
         OkHttpClient auth = new OkHttpClient().newBuilder()
                 .build();
         MediaType mediaTypeAuth = MediaType.parse("application/x-www-form-urlencoded");
-        RequestBody bodyAuth = RequestBody.create(mediaTypeAuth, "client_id=2ad3a5544bd8.vertexinc.com&c6421568aba6a9e8051bd3e578b875785bf48c4d80eee6db161b77229a3e3be7&grant_type=client_credentials");
+        RequestBody bodyAuth = RequestBody.create(mediaTypeAuth, "client_id=\"f49d4da96a1b.vertexinc.com\"&client_secret: \"b36ade8eb930215e457aae6e04ced32c9b5a8e2c5ed9520a584bfb0b07b0581c\"&grant_type=\"client_credentials\"");
         Request requestAuth = new Request.Builder()
-                .url("https://testsales.dev.ondemand.vertexinc.com/oseries-auth/oauth/token")
+                .url("http://kopas0007:8995/oseries-auth/oauth/token")
                 .method("POST", bodyAuth)
                 .addHeader("Content-Type", "application/x-www-form-urlencoded")
                 //   .addHeader("Cookie", "BIGipServerpool_sales09_OnDemand=543038986.20480.0000")
