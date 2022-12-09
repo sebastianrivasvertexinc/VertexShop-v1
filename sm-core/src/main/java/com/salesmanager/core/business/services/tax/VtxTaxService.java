@@ -56,9 +56,9 @@ private String clientSecret;
         OkHttpClient auth = new OkHttpClient().newBuilder()
                 .build();
         MediaType mediaTypeAuth = MediaType.parse("application/x-www-form-urlencoded");
-        RequestBody bodyAuth = RequestBody.create(mediaTypeAuth, "client_id=fd2b85af77da.vertexinc.com&client_secret=3c927e1e67329ef4efeb3a7f91004231328f7f194afdf7cec176f9bcea767b6d&grant_type=client_credentials");
+        RequestBody bodyAuth = RequestBody.create(mediaTypeAuth, "client_id=2ad3a5544bd8.vertexinc.com&c6421568aba6a9e8051bd3e578b875785bf48c4d80eee6db161b77229a3e3be7&grant_type=client_credentials");
         Request requestAuth = new Request.Builder()
-                .url("https://sales-oseries9.ondemand.vertexinc.com/oseries-auth/oauth/token")
+                .url("https://testsales.dev.ondemand.vertexinc.com/oseries-auth/oauth/token")
                 .method("POST", bodyAuth)
                 .addHeader("Content-Type", "application/x-www-form-urlencoded")
                 //   .addHeader("Cookie", "BIGipServerpool_sales09_OnDemand=543038986.20480.0000")

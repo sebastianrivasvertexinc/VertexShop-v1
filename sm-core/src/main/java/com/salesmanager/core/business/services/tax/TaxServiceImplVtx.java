@@ -1,4 +1,4 @@
-/*package com.salesmanager.core.business.services.tax;
+package com.salesmanager.core.business.services.tax;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.salesmanager.core.business.exception.ServiceException;
@@ -87,10 +87,11 @@ public class TaxServiceImplVtx
 		List<TaxItem> list = new ArrayList<TaxItem>();
 		VtxTaxService vtx=new VtxTaxService();
 		VtxTaxCalc vtxEngineCalculation=new VtxTaxCalc();
+
 		String 	accessToken = null;
 		try {
 			accessToken = vtx.getAuthenticate();
-			 vtxEngineCalculation=vtx.doCalculation(accessToken);
+		//	 vtxEngineCalculation=vtx.doCalculation(accessToken);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -162,4 +163,3 @@ public class TaxServiceImplVtx
 
 	}
 }
-*/
